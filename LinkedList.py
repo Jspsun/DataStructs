@@ -8,8 +8,7 @@ class LinkedList(object):
 
     def add(self, x):
         self.size += 1
-        new = Node()
-        new.val = x
+        new = Node(x)
 
         if not self.head:
             self.head = new
@@ -54,6 +53,10 @@ class Node (object):
     val = None
     next = None
 
+    def __init__(self, value):
+        self.val = value
+
+#
 # list = LinkedList()
 # list.add(0)
 # list.add(1)
@@ -63,7 +66,7 @@ class Node (object):
 # list.add(5)
 #
 #
-# list.remove()
+# # list.remove(5)
 #
 # for i in range(list.size):
 #     print list.get(i)

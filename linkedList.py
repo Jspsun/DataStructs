@@ -53,7 +53,7 @@ class LinkedList(object):
 class Node (object):
     val = None
     next = None
-#
+
 # list = LinkedList()
 # list.add(0)
 # list.add(1)

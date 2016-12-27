@@ -1,11 +1,11 @@
+# simple singly linked list
 class LinkedList(object):
-    head = None
-    size = 0
 
     def __init__(self):
         self.head = None
         self.size = 0
 
+    # adds nodes to the end of the list
     def add(self, x):
         self.size += 1
         new = Node(x)
@@ -23,6 +23,7 @@ class LinkedList(object):
         previous.next = new
         return
 
+    # removes nodes at a specific index
     def remove(self, index):
         if index < 0 or index > self.size - 1:
             return
@@ -40,6 +41,7 @@ class LinkedList(object):
         previous.next = temp.next
         return
 
+    # fetches a value of a node at a specific index
     def get(self, index):
         temp = self.head
         if index < 0 or index > self.size - 1:
@@ -66,7 +68,7 @@ class Node (object):
 # list.add(5)
 #
 #
-# # list.remove(5)
+# list.remove(5)
 #
 # for i in range(list.size):
 #     print list.get(i)
